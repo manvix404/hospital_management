@@ -1,0 +1,276 @@
+{% load static%}
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="MKK Hospital Responsive web template, Bootstrap Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <title>MKK Hospital Medical </title>
+  <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/style-starter.css">
+</head>
+
+<body>
+  <!--header-->
+  <div class="header-w3l">
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg stroke">
+          <a class="navbar-brand" href="index">
+          MKK<span class="sub-logo">H</span>ospital</span>
+          </a>
+          <!-- if logo is image enable this   
+            <a class="navbar-brand" href="#index.html">
+                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </a> -->
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-lg-auto">
+              
+              <a class="nav-link" href="index">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index">Center of Excellence</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="appoint">Book Appointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctor">Doctor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vaccine">Covid Vaccine</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item"><a class="nav-link" href="reports"> Hey, {{user.username}}</a></li>
+              <li class="nav-item active"><a class="nav-link" href='logout'>Logout</a></li>
+              {%else%}
+              <li class="nav-item"><a class="nav-link" href='login'>Login</a></li>
+              {% endif %}
+
+            </ul>
+
+          </div>
+         
+        </nav>
+      </div>
+    </header>
+    </div>
+    <!-- //header -->
+    <!--/breadcrumb-bg-->
+    <div class="breadcrumb-bg w3l-inner-page-breadcrumb py-5">
+      <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        <h2 class="title pt-5">About</h2>
+        <ul class="breadcrumbs-custom-path mt-3 text-center">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About </li>
+        </ul>
+      </div>
+    </div>
+  <!--//breadcrumb-bg-->
+  <!-- banner bottom shape -->
+  <div class="position-relative">
+    <div class="shape overflow-hidden">
+      <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+      </svg>
+    </div>
+  </div>
+  <!-- banner bottom shape -->
+  <!-- //w3l-inner-page-breadcrumb-->
+  <section class="w3l-about-ab" id="about">
+    <div class="midd-w3 py-5">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="imgw3l-ab mb-md-5 mb-3">
+          <img src="static/images/banner2.jpg" alt="" class="radius-image img-fluid">
+        </div>
+        <div class="row">
+          <div class="col-lg-5 left-wthree-img">
+            <h6 class="title-subhny">About Us</h6>
+            <h3 class="title-w3l mb-4">The Best Medics, Doctors & Physicians</h3>
+
+          </div>
+          <div class="col-lg-7 pl-lg-5 align-self">
+            <p class="">MKK Hospital is one of India's foremost multi-specialty healthcare providers catering to both Indian and international patients. Being the corporate tertiary care hospital, it is known for its high-end surgical capabilities and complex trauma management. The hospital offers super-specialty procedures and has a wide range of diagnostic and therapeutic facilities aiming to provide comprehensive healthcare services under one roof. 
+            </p>
+            <p class="mt-4">The hospital focuses on ensuring the availability of latest medical facilities, skilled medical and paramedical support staffs. MKK Hospital has redefined the Tertiary Care Treatment. In addition to this MKK Hospital is in the panel of most of the leading TPAs in India and have Tie-ups with all major Insurance companies. We are also the preferred healthcare provider for most of the Corporate and Public Sector Undertakings. We have also tied up with Govt. Employees health scheme, Employees State Insurance Corporation and Chief Minister’s Comprehensive Health Scheme.
+            </p>
+            <!-- <a href="about.html" class="btn btn-style btn-primary mt-lg-5 mt-4">Read More</a> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="w3l-two-servicses py-5" id="services2">
+    <div class="container py-lg-5 py-md-4 py-2">
+     
+      <div class="row bottom-ab-grids">
+        <div class="col-lg-6 bottom-ab-left align-self">
+          <h6 class="title-subhny">What We Offer</h6>
+          <h3 class="title-w3l mb-4">Our Advantages</h3>
+          <p class="">MKK Hospital promises to provide high quality treatments with highly equipped and advanced technologies </p>
+          <ul class="w3l-right-book mt-4">
+            <li><span class="fa fa-check"></span> Specialists and Dentists as One Team</li>
+            <li><span class="fa fa-check"></span> Complimentary Consultations</li>
+            <li><span class="fa fa-check"></span> All Types of Dental Services</li>
+            <li><span class="fa fa-check"></span> On-site Laboratory</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 bottom-right-grids pl-lg-5 mt-lg-0 mt-5">
+          <img src="static/images/g4.jpg" alt="" class="radius-image img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //home page block grids -->
+  <!-- /w3l-content-5-->
+  <!-- <section class="w3l-content-5 py-5">
+    <div class="content-4-main py-lg-5 py-md-4">
+      <div class="container pb-5">
+        <div class="title-content text-left">
+          <h6 class="title-subhny">Here & Now, Every Day</h6>
+          <h3 class="title-w3l two mb-sm-5 mb-4">Healing Experiences- For Everyone <br> All The Time</h3>
+        </div>
+        <div class="content-info-in row">
+          <div class="content-left col-lg-6">
+            <p class=""> We focus on the needs of every small to middle market businesses to improve and grow
+              their return. lacinia id erat eu
+              ullam corper. Nunc id ipsum fringilla, gravida felis vitae. lacinia id, sunt in
+              culpa quis lacinia. Lorem ipsum dolor, sit amet init elit. Eos,
+              debitis doler et in.lacinia id, sunt in culpa quis. </p>
+            <a href="#discover" class="btn btn-style btn-primary mt-md-5 mt-4">Get in touch</a>
+          </div>
+          <div class="content-right col-lg-6 mt-lg-0 mt-5">
+            <p> We focus on the needs of every small to middle market businesses to improve and grow
+              their return. lacinia id erat eu
+              ullam corper. Nunc id ipsum fringilla, gravida felis vitae. lacinia id, sunt in
+              culpa quis lacinia. Lorem ipsum dolor, sit amet init elit. Eos,
+              debitis. gravida felis vitae. lacinia id, sunt in
+              culpa quis. Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- /w3l-content-5-->
+  <!--/team-sec-->
+  <!--  -->
+  <!--//team-sec-->
+  
+  <!-- footer -->
+  <!-- <section class="w3l-footer-29-main">
+    <div class="footer-29 py-5">
+      <div class="container py-lg-4">
+        <div class="row footer-top-29">
+          <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
+            <div class="footer-logo mb-3">
+              <a class="navbar-brand" href="index.html">MKK Hospital</a>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Lorem ipsum dolor sit amet elit.</p>
+            <ul class="mt-3">
+              <li><a href="tel:+(21) 255 999 8888"><span class="fa fa-phone"></span> +(21) 255 999 8888</a></li>
+              <li><a href="mailto:MKK Hospital@mail.com" class="mail"><span class="fa fa-envelope-open-o"></span>
+                  MKK@mail.com</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
+
+            <ul>
+              <h6 class="footer-title-29">History</h6>
+              <li><a href="about">About Us</a></li>
+              
+              <li><a href="services.html">Departments</a></li>
+              <li><a href="#careers"> Careers</a></li>
+              <li><a href="about">Team</a></li>
+              <li><a href="contact">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
+            <h6 class="footer-title-29">Useful Links</h6>
+            <ul>
+              <li><a href="#terms">Terms of service</a></li>
+              <li><a href="#privacy"> Privacy policy</a></li>
+              <li><a href="#doc"> Documentation</a></li>
+              <li><a href="#support"> Support</a></li>
+              
+            </ul>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- //footer -->
+
+  <!--//footer-->
+  <!-- Template JavaScript -->
+  <script src="static/js/jquery-3.3.1.min.js"></script>
+  <script src="static/js/theme-change.js"></script>
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+
+  <script src="static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

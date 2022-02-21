@@ -1,0 +1,234 @@
+{% load static%}
+<!doctype html>
+<html lang="zxx">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords"
+    content="MKK Hospital Responsive web template, Bootstrap Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+  <title>MKK Hospital Medical </title>
+  <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="static/css/style-starter.css">
+</head>
+
+<body>
+  <!--header-->
+  <div class="header-w3l">
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg stroke">
+          <a class="navbar-brand" href="index">
+          MKK<span class="sub-logo">H</span>ospital</span>
+          </a>
+          <!-- if logo is image enable this   
+            <a class="navbar-brand" href="#index.html">
+                <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+            </a> -->
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+            <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mx-lg-auto">
+              
+              <a class="nav-link" href="index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index">Center of Excellence</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="appoint">Book Appointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctor">Doctor</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="vaccine">Covid Vaccine</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item"><a class="nav-link" href="reports">Hey, {{user.username}}</a></li>
+              <li class="nav-item active"><a class="nav-link" href='logout'>Logout</a></li>
+              {%else%}
+              <li class="nav-item"><a class="nav-link" href='login'>Login</a></li>
+              {% endif %}
+
+            </ul>
+
+          </div>
+         
+        </nav>
+      </div>
+    </header>
+    </div>
+    <!-- //header -->
+    <!--/breadcrumb-bg-->
+    <!-- <div class="breadcrumb-bg w3l-inner-page-breadcrumb py-5">
+      <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+        <h2 class="title pt-5">Book Appointment</h2>
+        <ul class="breadcrumbs-custom-path mt-3 text-center">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Book Appointment </li>
+        </ul>
+      </div>
+    </div> -->
+
+    
+
+    <!-- appointment -->
+    <section class="w3l-content-3 py-5" id="appointment">
+        <!-- /content-6-section -->
+        <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+            <h2 class="title pt-5">Book Vaccine</h2>
+            <ul class="breadcrumbs-custom-path mt-3 text-center">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Vaccinations </li>
+            </ul>
+          </div>
+        <div class="content-3-info py-3">
+          <div class="container py-lg-4">
+            <div class="row appointment-formw3">
+              <div class="col-lg-6 welcome-left">
+                <h6 class="title-subhny mb-2">Vaccinations</h6>
+                <h3 class="title-w3l two mb-3">Book Your Vaccine Now!</h3>
+                <!-- labelbox for vaccine count -->
+                <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-3">
+                    {% for vac in vacs%}
+                    <h5 style= "color:white;" class="title pt-5">{{vac.name}}: {{vac.quantity}}</h5>
+                    {%endfor%}
+                    <!-- <h5 style= "color:white;" class="title pt-5">Covishield: 100</h5> -->
+                    
+                    </div>
+              </div>
+              
+              <div class="col-lg-6 free-appointment pl-lg-5 mt-5">
+                <div class="appointment-form">
+                  <form action="vaccine" method="post">
+                    {% csrf_token %}
+                    <div class="fields-grid">
+                      <div class="styled-input">
+    
+                        <div class="appointment-form-field">
+    
+                          <input type="text" name="fullname" placeholder="Full Name" required="">
+                        </div>
+                      </div>
+                      <div class="styled-input">
+    
+                        <div class="appointment-form-field">
+    
+                          <input type="email" name="email" placeholder="Enter Email" required="">
+                        </div>
+                      </div>
+                      <div class="styled-input">
+    
+                        <div class="appointment-form-field">
+    
+                          <input type="text" name="phone" placeholder="Enter Number" required="">
+                        </div>
+                      </div>
+    
+                      <div class="styled-input">
+    
+                        <div class="appointment-form-field">
+    
+                          <input type="date" name="date" placeholder="Set a Date" required="">
+                        </div>
+                      </div>
+                      <div class="styled-input">
+    
+                        <div class="appointment-form-field">
+                          <select name="vacc" id="department" required="Specialization">
+                            <option value="">Vaccine*</option>
+                            {%for vac in vacs%}
+                            <option value="{{vac.id}}">{{vac.name}}</option>
+                            {%endfor%}
+                            <!-- <option value="Cardiology">Covishield</option>
+                            <option value="Heart Surgery">Covaxin</option>
+                            <option value="Skin Care">Pfizer</option> -->
+                          </select>
+                        </div>
+                      </div>
+                      
+    
+                    </div>
+                    <div class="appointment-btn text-lg-right">
+                      <button type="submit" class="btn btn-style btn-primary mt-4">Book Vaccine</button>
+                    </div>
+                    <div>{% for message in messages %}
+                    <h3 style="color:rgb(20, 233, 84)">{{message}}</h3>
+                    {% endfor %}</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    <!-- Template JavaScript -->
+  <script src="static/js/jquery-3.3.1.min.js"></script>
+  <script src="static/js/theme-change.js"></script>
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+
+  <script src="static/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

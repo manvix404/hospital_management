@@ -1,0 +1,12 @@
+{% autoescape off %}
+Hello,
+
+Name of user: {{user}}
+Email id: {{email}}
+Regarding: {{sub}}
+Message: {{msg}}
+
+Sincerely,
+The Website Team
+
+{% endautoescape %}
